@@ -22,19 +22,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Md-3p-X9a">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Silly Song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Md-3p-X9a">
                                 <rect key="frame" x="27" y="55.000000000000007" width="360" height="44.666666666666679"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="38"/>
                                 <color key="textColor" red="0.96743713557438527" green="1" blue="0.97810838749509632" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" editable="NO" text="dfgsdfgsdfgsdf" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Tl-tf-t1I">
-                                <rect key="frame" x="27" y="254.99999999999989" width="360" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" editable="NO" textAlignment="center" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Tl-tf-t1I">
+                                <rect key="frame" x="27" y="255" width="360" height="175"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="175" id="0sk-iL-RsE"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter Your Name" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-es-Dnb">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Name" textAlignment="center" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-es-Dnb">
                                 <rect key="frame" x="27" y="166.66666666666666" width="360" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -49,15 +52,15 @@
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="9Md-3p-X9a" secondAttribute="trailing" constant="7" id="BDV-Gb-lTs"/>
                             <constraint firstItem="9Md-3p-X9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="DL2-jO-Aja"/>
-                            <constraint firstItem="8Tl-tf-t1I" firstAttribute="top" secondItem="xDa-es-Dnb" secondAttribute="bottom" constant="8" symbolic="YES" id="KD4-eV-K2X"/>
+                            <constraint firstItem="8Tl-tf-t1I" firstAttribute="top" secondItem="xDa-es-Dnb" secondAttribute="bottom" constant="58.333333333333144" id="HD3-oX-t32"/>
+                            <constraint firstItem="8Tl-tf-t1I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="TA5-Hp-Iql"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Md-3p-X9a" secondAttribute="trailing" constant="7" id="W7G-Kb-HXW"/>
-                            <constraint firstItem="8Tl-tf-t1I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="Yj2-Am-Gnx"/>
                             <constraint firstItem="9Md-3p-X9a" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="35" id="bFg-a3-4Ce"/>
                             <constraint firstItem="xDa-es-Dnb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="cfv-mD-LHp"/>
                             <constraint firstItem="9Md-3p-X9a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="7" id="dLt-uA-QKM"/>
                             <constraint firstItem="xDa-es-Dnb" firstAttribute="top" secondItem="9Md-3p-X9a" secondAttribute="bottom" constant="67" id="dTL-bK-h2R"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="8Tl-tf-t1I" secondAttribute="trailing" constant="7" id="ncw-CU-fpG"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xDa-es-Dnb" secondAttribute="trailing" constant="7" id="olq-gf-S9C"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="8Tl-tf-t1I" secondAttribute="trailing" constant="7" id="wqI-1Q-mfx"/>
                         </constraints>
                     </view>
                     <connections>
@@ -67,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93.599999999999994" y="-11.244377811094454"/>
+            <point key="canvasLocation" x="92.753623188405811" y="-11.413043478260871"/>
         </scene>
     </scenes>
 </document>

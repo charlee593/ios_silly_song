@@ -22,32 +22,32 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nameField.delegate = self
-        lyricsView.text = "ss"
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
     @IBAction func reset(_ sender: Any) {
         lyricsView!.text = ""
         nameField!.text = ""
+
     }
 
     @IBAction func displayLyris(_ sender: Any) {
-        lyricsView!.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
-        
+        if nameField.text! == ""{
+            return
+        }
+        else{
+            lyricsView!.text = lyricsForName(lyricsTemplate: bananaFanaTemplate, fullName: nameField.text!)
+        }
     }
     
     func shortNameForName(name: String) -> String{
         let vowelSet = CharacterSet(charactersIn: "aeiou")
         
-        if let index = name.lowercased().rangeOfCharacter(from: vowelSet)?.lowerBound{
-            return name.substring(from: index)
+        guard let index = name.lowercased().rangeOfCharacter(from: vowelSet)?.lowerBound else{
+            return name.lowercased()
         }
         
-        return name.lowercased()
+        return name.lowercased().substring(from: index)
     }
     
     
